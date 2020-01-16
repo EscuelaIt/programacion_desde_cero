@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>colores</title>
+</head>
+<body>
+  <script>
+  
+  var color = prompt('dame un color', 'rojo');
+
+  switch(color) {
+    case 'rojo':
+      document.bgColor = '#ff9999';
+      console.log('rojo');
+      break;
+    case 'azul':
+      document.bgColor = '#9999ff';
+      console.log('azul');
+      break;
+    case 'verde':
+      document.bgColor = '#99ff99';
+      console.log('verde');
+      break;
+    default:
+      document.bgColor = '#ddd';
+  }
+
+  var numero = prompt('dame un numero');
+  numero = parseInt(numero);
+  switch(numero) {
+    case 1:
+    case 2: 
+    case 3: 
+    case 4: 
+    case 5: 
+    case 6: 
+    case 7: 
+    case 8: 
+    case 9: 
+    case 10: 
+      alert('es del 1 al 10');
+      break;
+    default:
+      alert('NO!!! es del 1 al 10');
+  }
+
+
+  </script>
+</body>
+</html>

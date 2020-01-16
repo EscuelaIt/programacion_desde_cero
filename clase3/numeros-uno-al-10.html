@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>uno al 10</title>
+</head>
+<body>
+  <script>
+  var numero = prompt('Dame un número');
+  numero = parseFloat(numero);
+  //alert(numero);
+
+  // if(isNaN(numero)) {
+  //   alert('Me has introducido algo que no es un número');
+  // } else {
+  //   if(numero >= 1 && numero <= 10) {
+  //     alert('Estaba entre 1 y 10');
+  //   } else {
+  //     alert('NO está entre 1 y 10');
+  //   }
+  // }
+  
+  console.log(isNaN(numero));
+
+  if( ! isNaN(numero)) {
+    
+    console.log(numero >= 1);
+
+    if(numero >= 1 && numero <= 10) {
+      alert('Estaba entre 1 y 10');
+    } else {
+      alert('NO está entre 1 y 10');
+    }
+  } else {
+    alert('Me has introducido algo que no es un número');
+  }
+
+
+
+  </script>
+</body>
+</html>
