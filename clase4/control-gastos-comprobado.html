@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var dinero;
+    var gasto;
+
+    do {
+      dinero = prompt('dame tu dinero');
+      dinero = parseFloat(dinero);
+      dinero = Math.round(dinero * 100) / 100;
+      if(isNaN(dinero)) {
+        alert('El dinero introducido no es un número');
+      }
+    } while(isNaN(dinero));
+
+    console.log(dinero);
+
+    while(dinero > 0) {
+      
+      do {
+        gasto = prompt('dame tu gasto\nEscribe "salir" para detener.');
+        if(gasto == 'salir') {
+          break;
+        }
+        gasto = parseFloat(gasto);
+        gasto = Math.round(gasto * 100) / 100;
+      } while(isNaN(gasto));
+
+      if(gasto == 'salir') {
+        break;
+      }
+
+      if(dinero < gasto) {
+        alert('No tienes tanto dinero!!!!');
+        continue;
+      }
+
+      dinero -= gasto; // dinero = dinero - gasto;
+      dinero = Math.round(dinero * 100) / 100;
+      alert(`Te has gastado ${gasto} y te queda ${dinero}`);
+    }
+  </script>
+</body>
+</html>

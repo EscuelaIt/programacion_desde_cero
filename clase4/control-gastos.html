@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var dinero = prompt('Dime tu dinero');
+    dinero = parseFloat(dinero);
+    console.log(dinero);
+    console.log(dinero > 0);
+    while(dinero > 0) {
+      var gasto = prompt('Dime tu gasto');
+      dinero -= gasto; // dinero = dinero - gasto;
+      alert(`Te has gastado ${gasto} y te queda ${dinero}`);
+    }
+  </script>
+</body>
+</html>
