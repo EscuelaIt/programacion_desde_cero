@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+  var dia = prompt('dime un día de la semana');
+  
+  // if(dia == 'lunes' || dia == 'martes' || dia == 'miercoles') {
+  //   // el día es válido
+  // } else {
+  //   // el día no es válido
+  // }
+
+  switch(dia) {
+    case 'lunes':
+    case 'martes':
+    case 'miercoles':
+    case 'jueves':
+    case 'viernes':
+    case 'sabado':
+      break;
+    case 'domingo':
+      alert('buen descanso');
+      break;
+    default:
+      alert('No es un día válido');
+  }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var cadena = prompt('Dame una cadena');
+    var resultado = '';
+    for(var i = 0; i < cadena.length; i++) {
+      var char = cadena.charAt(i);
+      switch(char) {
+        case 'a':
+          char = 'A';
+          break;
+        case 'e':
+          char = 'E';
+          break;
+        case 'i':
+          char = 'I';
+          break;
+        case 'o':
+          char = 'O';
+          break;
+        case 'u':
+          char = 'U';
+          break;
+      }
+      resultado += char;
+    }
+    alert(resultado);
+  </script>
+</body>
+</html>

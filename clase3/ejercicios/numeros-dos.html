@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+  var numero1 = prompt('dame un 1er num');
+  numero1 = parseFloat(numero1);
+  if(isNaN(numero1)) {
+    alert('Eso no era un número');
+  } else {
+    var numero2 = prompt('dame un 2do num');
+    numero2 = parseFloat(numero2);
+    if(isNaN(numero2)) {
+      alert('Ese seg num no era un número');
+    } else {
+      // los dos eran correctos
+      var multiplicacion = numero1 * numero2;
+      if(multiplicacion >= 1000) {
+        alert('Felicidades, llegaste a 1000');
+      } else {
+        // Esta primera línea no funciona por la precedencia de operadores
+        // alert('ui!!! te faltó: ' + 1000 - multiplicacion);
+        alert('ui!!! te faltó: ' + (1000 - multiplicacion));
+      }
+    }
+  }
+  
+  </script>
+</body>
+</html>
