@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>numeros enteros</title>
+</head>
+<body>
+  <script src="./solicitar-numeros.js"></script>
+  <script>
+    
+    // alert
+    // prompt
+    // confirm('¿De verdad quieres?')
+
+    function solicitarArrayEnteros() {
+      var mensaje = '¿Quieres introducir el primer número?';
+      var arrayEnteros = [];
+      while(confirm(mensaje)) {
+        var entero = solicitarEntero();
+        arrayEnteros.push(entero);
+        mensaje = '¿Quieres introducir otro número?';
+      }
+      return arrayEnteros;
+    }
+
+    var enteros = solicitarArrayEnteros();
+    console.log(enteros);
+
+  </script>
+</body>
+</html>
