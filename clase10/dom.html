@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trabajando con el DOM</title>
+</head>
+<body>
+
+  <h1>Acceso al DOM</h1>
+
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, expedita? Atque necessitatibus itaque possimus iste exercitationem, tenetur, nam saepe dolor quo nobis maiores eius tempore officia, facere odio quibusdam ipsa?</p>
+  <p id="parrafo">Dolore numquam quod natus odio libero odit! Dolore illo soluta quisquam, maxime id facilis quas libero aperiam nulla nam, quaerat optio modi atque asperiores facere autem deleniti voluptatibus enim excepturi?</p>
+  <p>Dignissimos sint molestiae quo quisquam earum maxime illo. Consectetur maxime nam rem odio, aperiam eveniet rerum officiis harum laborum ea, facere fugiat magnam ullam officia adipisci nisi esse iusto nobis?</p>
+
+  <input type="text" id="nombre">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      campoInput = document.getElementById('nombre');
+      campoInput.focus();
+      campoInput.setAttribute('placeholder', "placeholder creado dinamicamente");
+
+      var parrafo = document.getElementById('parrafo');
+      parrafo.style.color = 'red';
+      parrafo.style.textAlign = 'center';
+  
+      var heading = document.querySelector('h1');
+      heading.innerHTML = 'Esto está cambiado desde <i>Javascript</i>';
+      heading.querySelector('i').style.fontSize = '3rem';
+  
+      function cambiaTextoParrafo(nodo, index) {
+        nodo.innerText = 'El texto nuevo para mi <b>párrafo</b> ' + index;
+      }
+      document.querySelectorAll('p').forEach(cambiaTextoParrafo);
+      
+      function procesaClic() {
+        console.log('has hecho clic');
+      }
+      parrafo.addEventListener('click', procesaClic);
+
+      document.getElementById('nombre').addEventListener('input', function(evento) {
+        console.log(evento.target.value);
+      });
+
+    });
+  </script>
+
+</body>
+</html>

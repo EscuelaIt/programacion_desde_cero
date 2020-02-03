@@ -1,0 +1,35 @@
+body {
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #666;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 900px;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 2rem;
+}
+
+#letras button {
+  margin: 1px;
+}
+
+#palabra {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+#reiniciar {
+  margin-top: 20px;
+}
